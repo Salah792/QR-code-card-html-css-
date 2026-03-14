@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+:root {
+  --ff-sans: "Outfit", sans-serif;
+
+  /* small screen font-sizes */
+  --fs-200: 0.94rem;
+  --fs-400: 1.2rem;
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --clr-White: hsl(0, 0%, 100%);
+
+  --clr-slate-300: hsl(212, 45%, 89%);
+  --clr-slate-500: hsl(216, 15%, 48%);
+  --clr-slate-900: hsl(218, 44%, 22%);
+
+  --br: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  /* border: 1px solid red; */
+  border-radius: 15px;
+}
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-200);
+  font-weight: var(--fw-400);
+  color: var(--clr-slate-500);
+  background-color: var(--clr-slate-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* Utility classes */
+
+.flow-content > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+/* Componenets  */
+
+.card {
+  background-color: var(--clr-White);
+  padding: 1rem;
+  border-radius: 25px;
+  max-width: 80vw;
+  /* max-width: min(15rem, 40vw); */
+}
+.card-body {
+  text-align: center;
+}
+.card-title {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-700);
+  color: var(--clr-slate-900);
+}
+
+/* Media queries  */
+@media (min-width: 500px) {
+  .card {
+    max-width: 20rem;
+  }
+}
